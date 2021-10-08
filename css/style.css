@@ -1,0 +1,394 @@
+html {
+    text-align: center;
+    background: #F8F8FA; /* no turtle */
+    font-family: "Lato", Cambria, Garamon, Palatino, P052, serif;
+}
+
+body {
+    padding: 0px 0px;
+    /* padding: 0px 40em; */
+    margin: auto;
+    width: 45em;
+    text-align: left;
+    /* background-image: url("assets/turtle.jpg"); */
+    background-repeat: tile;
+    /* background-size: 300px; */
+    background-size: 500px;
+    background-attachment: fixed;
+    color: #555;
+    font-family: "Lato", Cambria, Garamon, Palatino, P052, serif;
+}
+
+#container {
+    display: inline-block;
+    /* background: #E7EEF5; */
+    background: #F8F8FA;
+    padding: 10px;
+    margin-top: 1em;
+    line-height: 1.5;
+}
+
+p {
+    color: #333;
+}
+
+#intro p{
+    margin: 0.8em 0.5em;
+}
+
+#intro a,#paper a {
+    color: #507BD9;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#intro a:hover,#paper a:hover {
+    text-decoration: underline;
+}
+
+.smallcap {
+    text-transform: lowercase;
+    font-variant: small-caps;
+}
+
+.smallcap::first-letter {
+    text-transform: uppercase;
+}
+
+.op {
+    font-family: "Math-Symbol", Avernir, TFangsong, FangSong, FangSong_GB2312, serif;
+}
+
+.sp-line {
+    border-bottom: 0px dashed #FFF;
+    border-top: 1px dashed #CCC;
+    margin: 0.5em 0;
+}
+
+.post-list {
+    padding: 0
+}
+
+.post-list .post-item {
+    list-style-type: none;
+    margin-left: 0;
+    margin-bottom: 1rem
+}
+
+.post-list .post-item .meta {
+    display: block;
+    /* font-size: 14px; */
+    font-size: 12px;
+    color: #666;
+    /* min-width: 100px; */
+    min-width: 80px;
+    margin-right: 16px
+}
+
+@media (min-width: 480px) {
+    .post-list .post-item {
+        display:flex;
+        margin-bottom: 5px
+    }
+
+    .post-list .post-item .meta {
+        text-align: left
+    }
+}
+
+.content {
+    font-feature-settings: 'lnum','calt','liga','clig'
+}
+
+.content a {
+    text-decoration: none;
+    color: #000;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 100% 6px;
+}
+
+.content a:hover {
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 100% 6px;
+    background-image: linear-gradient(transparent,transparent 3.5px,#d480aa 3.5px,#d480aa calc(3.5px + .5pt),transparent calc(3.5px + .5pt),transparent)
+}
+
+.content a.icon {
+    background: 0 0
+}
+
+.content a.icon:hover {
+    color: #d480aa
+}
+
+.content .h1,.content h1 {
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 600
+}
+
+.content .h2,.content h2 {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 600
+}
+
+.content h3 {
+    font-size: 1.25rem;
+    font-weight: 600
+}
+
+.content .h1,.content .h2,.content .h3,.content .h4,.content .h5,.content .h6,.content h1,.content h2,.content h3,.content h4,.content h5,.content h6 {
+    line-height: 1.2;
+    margin: 1em 0 .5em
+}
+
+.content hr {
+    border: 1px dashed #ccc
+}
+
+.content strong {
+    font-weight: 700
+}
+
+.content cite,.content em {
+    font-style: italic
+}
+
+.content sub,.content sup {
+    font-size: .75em;
+    line-height: 0;
+    position: relative
+}
+
+.content small {
+    font-size: .85em
+}
+
+.content abbr,.content acronym {
+    border-bottom: 1px dotted
+}
+
+.content ol,.content ul {
+    padding-left: 1em
+}
+
+.content ol {
+    list-style: none;
+    counter-reset: item -1
+}
+
+.content ol>li {
+    position: relative
+}
+
+.content ol>li:before {
+    display: block;
+    position: absolute;
+    left: -2em;
+    width: 1.6em;
+    text-align: right;
+    content: counter(item) '.';
+    counter-increment: item 1;
+    font-feature-settings: 'lnum','tnum'
+}
+
+.content ol ol {
+    counter-reset: item1 0
+}
+
+.content ol ol>li:before {
+    content: counter(item1,lower-latin) '.';
+    counter-increment: item1 1
+}
+
+.content ol ol ol>li:before {
+    content: counter(item1,lower-roman) '.'
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.content table tbody>tr td,.content table tbody>tr>th,.content table>thead>tr td,.content table>thead>tr>th {
+    padding: .3em .6em;
+    vertical-align: top;
+    border-top: 1px solid #666
+}
+
+.content table tbody>tr>th,.content table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #666
+}
+
+.content table>caption+thead>tr:first-child>td,.content table>caption+thead>tr:first-child>th,.content table>colgroup+thead>tr:first-child>td,.content table>colgroup+thead>tr:first-child>th,.content table>thead:first-child>tr:first-child>td,.content table>thead:first-child>tr:first-child>th {
+    border-top: 0
+}
+
+.content table>tbody+tbody {
+    border-top: 2px solid #666
+}
+
+.content img,.content video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto
+}
+
+.content .f4,.content .p,.content div,.content dl,.content h4,.content h5,.content h6,.content ol,.content p,.content pre,.content ul {
+    line-height: 1.5
+}
+
+.content p {
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto
+}
+
+.content code,.content pre {
+    -moz-hyphens: manual;
+    -ms-hyphens: manual;
+    -webkit-hyphens: manual;
+    hyphens: manual
+}
+
+.content .video-container {
+    position: relative;
+    padding-top: 56.25%;
+    height: 0;
+    overflow: hidden
+}
+
+.content .video-container embed,.content .video-container iframe,.content .video-container object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 0
+}
+
+.content .mghl b {
+    font-weight: inherit
+}
+
+.content .pullquote {
+    text-align: left;
+    width: 45%;
+    margin: 0
+}
+
+.content .pullquote.left {
+    margin-left: .5em;
+    margin-right: 1em
+}
+
+.content .pullquote.right {
+    margin-right: .5em;
+    margin-left: 1em
+}
+
+.content .caption {
+    color: color-grey;
+    display: block;
+    font-size: .9em;
+    margin-top: .5em;
+    position: relative;
+    text-align: center
+}
+
+.content blockquote {
+    background: inherit;
+    color: #888;
+    border-left: 0 solid #ccc;
+    margin: 1rem 10px;
+    padding: .5em 10px;
+    quotes: '\201C' '\201D' '\2018' '\2019';
+    position: relative
+}
+
+.content blockquote:before {
+    position: absolute;
+    color: #888;
+    content: '\201C';
+    font-size: 2em;
+    left: -.3em;
+    top: .25em
+}
+
+.content blockquote footer {
+    color: #666;
+    font-size: 11px;
+    margin: line-height 0;
+    background-image: linear-gradient(transparent,transparent 5px,#666 5px,#666)
+}
+
+.content blockquote footer a:hover:before,.content blockquote footer background-image: linear-gradient(transparent:before,.contentblockquotefootertransparent4px:before,.contentblockquotefooter#9994px:before,.contentblockquotefooter#999):before,.content blockquote footer cite:before,.content blockquote footer color: #999:before {
+    content: '—';
+    padding: 0 .5em
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+#foot {
+    background: #F8F8FA;
+    width: 26ch;
+    padding: 0px 10px;
+    font-family: monospace;
+}
+
+span.smaller {
+    font-size: smaller;
+}
+
+span.code {
+    display: inline-block;
+    padding: 1px 5px;
+}
+
+pre {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 30px 15px;
+    padding: 5px;
+}
+
+span.code, pre {
+    font-size: smaller;
+    font-family: monospace;
+    border: 0.5px solid white;
+    background: #333;
+    border-radius: 3px;
+}
+
+span.paraheading {
+    font-size: larger;
+    font-weight: bold;
+    padding-right: 10px;
+    display: inline-block;
+    margin-top: 50px;
+}
+
+img {
+    max-width: calc(100% - 40px);
+    margin: 30px 20px;
+    border-radius: 3px;
+}
+
+li {
+    line-height: 2em;
+}
